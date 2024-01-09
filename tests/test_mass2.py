@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile.algorithms.mass2 import mass2
+from matrixprofile2.matrixprofile.algorithms.mass2 import mass2
 
 def test_mass2():
     ts = np.array([1, 1, 1, 2, 1, 1, 4, 5])

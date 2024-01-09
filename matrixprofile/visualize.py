@@ -20,7 +20,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
 
-from matrixprofile.matrixprofile import core
+from matrixprofile2.matrixprofile import core
 
 
 def __combine(a, b):

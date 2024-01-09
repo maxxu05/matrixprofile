@@ -14,8 +14,8 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile.algorithms.regimes import extract_regimes
-from matrixprofile.matrixprofile.algorithms.mpx import mpx
+from matrixprofile2.matrixprofile.algorithms.regimes import extract_regimes
+from matrixprofile2.matrixprofile.algorithms.mpx import mpx
 
 import matrixprofile
 

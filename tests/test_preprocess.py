@@ -11,11 +11,11 @@ range = getattr(__builtins__, 'xrange', range)
 import numpy as np
 import pytest
 
-from matrixprofile.matrixprofile.preprocess import preprocess
-from matrixprofile.matrixprofile.preprocess import is_subsequence_constant
-from matrixprofile.matrixprofile.preprocess import add_noise_to_series
-from matrixprofile.matrixprofile.preprocess import impute_missing
-from matrixprofile.matrixprofile.preprocess import validate_preprocess_kwargs
+from matrixprofile2.matrixprofile.preprocess import preprocess
+from matrixprofile2.matrixprofile.preprocess import is_subsequence_constant
+from matrixprofile2.matrixprofile.preprocess import add_noise_to_series
+from matrixprofile2.matrixprofile.preprocess import impute_missing
+from matrixprofile2.matrixprofile.preprocess import validate_preprocess_kwargs
 
 
 def test_valid_preprocess_kwargs():

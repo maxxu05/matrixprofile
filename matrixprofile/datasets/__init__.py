@@ -1,2 +1,2 @@
-from matrixprofile.matrixprofile.datasets.datasets import load
-from matrixprofile.matrixprofile.datasets.datasets import fetch_available
+from matrixprofile2.matrixprofile.datasets.datasets import load
+from matrixprofile2.matrixprofile.datasets.datasets import fetch_available

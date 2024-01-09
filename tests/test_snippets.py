@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile.algorithms.snippets import snippets
+from matrixprofile2.matrixprofile.algorithms.snippets import snippets
 
 import matrixprofile
 

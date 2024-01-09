@@ -14,7 +14,7 @@ import sys
 
 import numpy as np
 
-from matrixprofile.matrixprofile import cycore
+from matrixprofile2.matrixprofile import cycore
 
 logger = logging.getLogger(__name__)
 

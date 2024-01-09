@@ -10,7 +10,7 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
+from matrixprofile2.matrixprofile import core
 
 
 def idealized_arc_curve(width, index):

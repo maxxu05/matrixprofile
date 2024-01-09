@@ -11,7 +11,7 @@ range = getattr(__builtins__, 'xrange', range)
 import numpy as np
 
 # Project imports
-from matrixprofile.matrixprofile import core
+from matrixprofile2.matrixprofile import core
 
 
 def validate_preprocess_kwargs(preprocessing_kwargs):

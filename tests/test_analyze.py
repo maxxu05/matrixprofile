@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile import analyze
+from matrixprofile2.matrixprofile import analyze
 
 import matrixprofile
 MODULE_PATH = matrixprofile.__path__[0]

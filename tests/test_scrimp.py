@@ -17,7 +17,7 @@ import pytest
 import numpy as np
 
 import matrixprofile
-from matrixprofile.matrixprofile.algorithms import scrimp
+from matrixprofile2.matrixprofile.algorithms import scrimp
 
 MODULE_PATH = matrixprofile.__path__[0]
 

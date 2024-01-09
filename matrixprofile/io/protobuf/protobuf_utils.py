@@ -10,8 +10,8 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
-from matrixprofile.matrixprofile.io.protobuf.proto_messages_pb2 import (
+from matrixprofile2.matrixprofile import core
+from matrixprofile2.matrixprofile.io.protobuf.proto_messages_pb2 import (
     Location, Motif, MPFOutput
 )
 

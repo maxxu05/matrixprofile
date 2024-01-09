@@ -9,7 +9,7 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
+from matrixprofile2.matrixprofile import core
 
 def mass2(ts, query, extras=False, threshold=1e-10):
     """

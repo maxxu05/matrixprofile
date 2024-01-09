@@ -12,9 +12,9 @@ import math
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
-from matrixprofile.matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
-from matrixprofile.matrixprofile.algorithms.mass2 import mass2
+from matrixprofile2.matrixprofile import core
+from matrixprofile2.matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
+from matrixprofile2.matrixprofile.algorithms.mass2 import mass2
 
 
 def mpdist(ts, ts_b, w, threshold=0.05, n_jobs=os.cpu_count()):

@@ -14,11 +14,11 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile.algorithms.stomp import stomp
-from matrixprofile.matrixprofile.algorithms.skimp import skimp
-from matrixprofile.matrixprofile.visualize import visualize
-from matrixprofile.matrixprofile.visualize import plot_snippets
-from matrixprofile.matrixprofile.algorithms.snippets import snippets
+from matrixprofile2.matrixprofile.algorithms.stomp import stomp
+from matrixprofile2.matrixprofile.algorithms.skimp import skimp
+from matrixprofile2.matrixprofile.visualize import visualize
+from matrixprofile2.matrixprofile.visualize import plot_snippets
+from matrixprofile2.matrixprofile.algorithms.snippets import snippets
 
 def test_catch_all_visualize_invalid_structure():
     data = {}

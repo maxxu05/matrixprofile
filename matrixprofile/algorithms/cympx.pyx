@@ -21,7 +21,7 @@ from numpy.math cimport INFINITY
 
 import numpy as np
 
-from matrixprofile.matrixprofile.cycore import muinvn
+from matrixprofile2.matrixprofile.cycore import muinvn
 
 
 @cython.boundscheck(False)

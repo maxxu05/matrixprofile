@@ -9,7 +9,7 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
+from matrixprofile2.matrixprofile import core
 
 
 def apply_av(profile, av="default", custom_av=None):

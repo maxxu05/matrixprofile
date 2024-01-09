@@ -15,9 +15,9 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile import transform
-from matrixprofile.matrixprofile import compute
-from matrixprofile.matrixprofile import io
+from matrixprofile2.matrixprofile import transform
+from matrixprofile2.matrixprofile import compute
+from matrixprofile2.matrixprofile import io
 
 import matrixprofile
 

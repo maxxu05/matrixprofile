@@ -9,8 +9,8 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
-from matrixprofile.matrixprofile.algorithms.mass2 import mass2
+from matrixprofile2.matrixprofile import core
+from matrixprofile2.matrixprofile.algorithms.mass2 import mass2
 
 
 def pmp_top_k_motifs(profile, exclusion_zone=None, k=3, max_neighbors=10, radius=3):

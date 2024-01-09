@@ -18,8 +18,8 @@ import json.tool
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
-from matrixprofile.matrixprofile.io.protobuf.protobuf_utils import (
+from matrixprofile2.matrixprofile import core
+from matrixprofile2.matrixprofile.io.protobuf.protobuf_utils import (
     to_mpf,
     from_mpf
 )

@@ -16,7 +16,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
+from matrixprofile2.matrixprofile import core
 
 
 def test_is_array_like_invalid():

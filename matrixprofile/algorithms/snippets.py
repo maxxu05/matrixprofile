@@ -10,8 +10,8 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile.matrixprofile import core
-from matrixprofile.matrixprofile.algorithms.mpdist import mpdist_vector
+from matrixprofile2.matrixprofile import core
+from matrixprofile2.matrixprofile.algorithms.mpdist import mpdist_vector
 
 
 def snippets(ts, snippet_size, num_snippets=2, window_size=None):

@@ -11,8 +11,8 @@ range = getattr(__builtins__, 'xrange', range)
 from scipy.cluster.hierarchy import linkage, inconsistent, fcluster
 from scipy.cluster.hierarchy import cophenet
 
-from matrixprofile.matrixprofile import core
-from matrixprofile.matrixprofile.algorithms.pairwise_dist import pairwise_dist
+from matrixprofile2.matrixprofile import core
+from matrixprofile2.matrixprofile.algorithms.pairwise_dist import pairwise_dist
 
 
 def hierarchical_clusters(X, window_size, t, threshold=0.05, method='single', 
