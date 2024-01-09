@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms.pairwise_dist import (
+from matrixprofile.matrixprofile.algorithms.pairwise_dist import (
     compute_dist,
     pairwise_dist,
 )

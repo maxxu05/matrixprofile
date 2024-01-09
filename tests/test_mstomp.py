@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms.mstomp import mstomp
+from matrixprofile.matrixprofile.algorithms.mstomp import mstomp
 
 
 def test_mstomp_window_size_less_than_4():

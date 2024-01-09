@@ -16,7 +16,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile import cycore
+from matrixprofile.matrixprofile import cycore
 import matrixprofile
 
 MODULE_PATH = matrixprofile.__path__[0]

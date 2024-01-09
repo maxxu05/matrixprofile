@@ -14,10 +14,10 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms import skimp
-from matrixprofile.algorithms.skimp import binary_split
-from matrixprofile.algorithms.skimp import maximum_subsequence
-from matrixprofile.exceptions import NoSolutionPossible
+from matrixprofile.matrixprofile.algorithms import skimp
+from matrixprofile.matrixprofile.algorithms.skimp import binary_split
+from matrixprofile.matrixprofile.algorithms.skimp import maximum_subsequence
+from matrixprofile.matrixprofile.exceptions import NoSolutionPossible
 
 
 def test_binary_split_1():

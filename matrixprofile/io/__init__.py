@@ -7,11 +7,11 @@ __all__ = [
     'from_mpf',
 ]
 
-from matrixprofile.io.__io import to_disk
-from matrixprofile.io.__io import from_disk
-from matrixprofile.io.__io import to_json
-from matrixprofile.io.__io import from_json
-from matrixprofile.io.protobuf.protobuf_utils import (
+from matrixprofile.matrixprofile.io.__io import to_disk
+from matrixprofile.matrixprofile.io.__io import from_disk
+from matrixprofile.matrixprofile.io.__io import to_json
+from matrixprofile.matrixprofile.io.__io import from_json
+from matrixprofile.matrixprofile.io.protobuf.protobuf_utils import (
 	to_mpf,
 	from_mpf
 )

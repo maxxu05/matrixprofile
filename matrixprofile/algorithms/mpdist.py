@@ -12,12 +12,12 @@ import math
 
 import numpy as np
 
-from matrixprofile import core
-from matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
-from matrixprofile.algorithms.mass2 import mass2
+from matrixprofile.matrixprofile import core
+from matrixprofile.matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
+from matrixprofile.matrixprofile.algorithms.mass2 import mass2
 
 
-def mpdist(ts, ts_b, w, threshold=0.05, n_jobs=1):
+def mpdist(ts, ts_b, w, threshold=0.05, n_jobs=os.cpu_count()):
     """
     Computes the MPDist between the two series ts and ts_b. For more details
     refer to the paper:

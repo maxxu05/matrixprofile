@@ -11,7 +11,7 @@ import logging
 
 import numpy as np
 
-from matrixprofile import core
+from matrixprofile.matrixprofile import core
 
 logger = logging.getLogger(__name__)
 

@@ -21,7 +21,7 @@ from numpy.math cimport INFINITY
 
 import numpy as np
 
-from matrixprofile.cycore import muinvn
+from matrixprofile.matrixprofile.cycore import muinvn
 
 
 @cython.boundscheck(False)
@@ -122,7 +122,7 @@ cpdef mpx_parallel(double[::1] ts, int w, bint cross_correlation=0, int n_jobs=1
 @cython.boundscheck(False)
 @cython.cdivision(True)
 @cython.wraparound(False)
-cpdef mpx_ab_parallel(double[::1] ts, double[::1] query, int w, bint cross_correlation=0, int n_jobs=1):
+cpdef mpx_ab_parallel(double[::1] ts, double[::1] query, int w, bint cross_correlation=0, int n_jobs=1, bint norm=1):
     """
     The MPX algorithm computes the matrix profile without using the FFT. This
     specific implementation includes similarity join (AB join).
@@ -183,13 +183,19 @@ cpdef mpx_ab_parallel(double[::1] ts, double[::1] query, int w, bint cross_corre
     diff_ga[0] = 0
     for i in prange(w, n, num_threads=n_jobs, nogil=True):
         diff_fa[i - w + 1] = (0.5 * (ts[i] - ts[i - w]))
-        diff_ga[i - w + 1] = (ts[i] - mua[i - w + 1]) + (ts[i - w] - mua[i - w])
+        if norm:
+            diff_ga[i - w + 1] = (ts[i] - mua[i - w + 1]) + (ts[i - w] - mua[i - w])
+        else:
+            diff_ga[i - w + 1] = (ts[i]) + (ts[i - w])
 
     diff_fb[0] = 0
     diff_gb[0] = 0
     for i in prange(w, qn, num_threads=n_jobs, nogil=True):
         diff_fb[i - w + 1] = (0.5 * (query[i] - query[i - w]))
-        diff_gb[i - w + 1] = (query[i] - mub[i - w + 1]) + (query[i - w] - mub[i - w])
+        if norm:
+            diff_gb[i - w + 1] = (query[i] - mub[i - w + 1]) + (query[i - w] - mub[i - w])
+        else:
+            diff_gb[i - w + 1] = (query[i]) + (query[i - w])
 
     # AB JOIN
     for i in prange(profile_len, num_threads=n_jobs, nogil=True):
@@ -198,12 +204,18 @@ cpdef mpx_ab_parallel(double[::1] ts, double[::1] query, int w, bint cross_corre
 
         cov_ = 0
         for j in range(i, i + w):
-            cov_ = cov_ + ((ts[j] - mua[i]) * (query[j-i] - mub[0]))
+            if norm:
+                cov_ = cov_ + ((ts[j] - mua[i]) * (query[j-i] - mub[0]))
+            else:
+                cov_ = cov_ + ((ts[j]) * (query[j-i]))
 
         for j in range(mx):
             k = j + i
             cov_ = cov_ + diff_fa[k] * diff_gb[j] + diff_ga[k] * diff_fb[j]
-            corr_ = cov_ * siga[k] * sigb[j]
+            if norm:
+                corr_ = cov_ * siga[k] * sigb[j]
+            else:
+                corr_ = cov_ 
 
             if corr_ > tmp_mp[threadnum, k]:
                 tmp_mp[threadnum, k] = corr_
@@ -221,12 +233,18 @@ cpdef mpx_ab_parallel(double[::1] ts, double[::1] query, int w, bint cross_corre
 
         cov_ = 0
         for j in range(i, i + w):
-            cov_ = cov_ + ((query[j] - mub[i]) * (ts[j-i] - mua[0]))
+            if norm:
+                cov_ = cov_ + ((query[j] - mub[i]) * (ts[j-i] - mua[0]))
+            else:
+                cov_ = cov_ + ((query[j]) * (ts[j-i]))
 
         for j in range(mx):
             k = j + i
             cov_ = cov_ + diff_fb[k] * diff_ga[j] + diff_gb[k] * diff_fa[j]
-            corr_ = cov_ * sigb[k] * siga[j]
+            if norm:
+                corr_ = cov_ * sigb[k] * siga[j]
+            else:
+                corr_ = cov_
 
             if corr_ > tmp_mpb[threadnum, k]:
                 tmp_mpb[threadnum, k] = corr_

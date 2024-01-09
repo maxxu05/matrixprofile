@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms.hierarchical_clustering import (
+from matrixprofile.matrixprofile.algorithms.hierarchical_clustering import (
     hierarchical_clusters
 )
 

@@ -12,12 +12,12 @@ import math
 
 import numpy as np
 
-from matrixprofile import core
-from matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
-from matrixprofile.algorithms.mass2 import mass2
+from matrixprofile.matrixprofile import core
+from matrixprofile.matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
+from matrixprofile.matrixprofile.algorithms.mass2 import mass2
 
 
-def mpdist_mean_sym(ts, ts_b, w, n_jobs=1):
+def mpdist_mean_sym(ts, ts_b, w, norm=False, n_jobs=1):
     """
     Computes the MPDist between the two series ts and ts_b. For more details
     refer to the paper:
@@ -58,11 +58,8 @@ def mpdist_mean_sym(ts, ts_b, w, n_jobs=1):
     if not core.is_one_dimensional(ts_b):
         raise ValueError('ts_b must be one dimensional!')
 
-    if not isinstance(threshold, float) or threshold <= 0 or threshold >= 1:
-        raise ValueError('threshold must be a float greater than 0 and less'\
-            ' than 1')
 
-    mp, mpi, mpb, mpib = cympx_ab_parallel(ts, ts_b, w, 0, n_jobs)
+    mp, mpi, mpb, mpib = cympx_ab_parallel(ts, ts_b, w, n_jobs, norm=norm)
 
     mp_abba = np.append(mp, mpb)
     data_len = len(ts) + len(ts_b)

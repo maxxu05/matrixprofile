@@ -1,16 +1,16 @@
-name = "matrixprofile"
+# name = "matrixprofile"
 
-import sys
-sys.path.append('../')
+# import sys
+# sys.path.append('../')
 
-from matrixprofile.version import __version__, __version_info__
+# # from matrixprofile.matrixprofile.version import __version__, __version_info__
 
-from matrixprofile.compute import compute
-from matrixprofile.visualize import visualize
-from matrixprofile.analyze import analyze
-from matrixprofile import discover
-from matrixprofile import transform
-from matrixprofile import utils
-from matrixprofile import io
-from matrixprofile import algorithms
-from matrixprofile import datasets
+# from matrixprofile.matrixprofile.compute import compute
+# from matrixprofile.matrixprofile.visualize import visualize
+# from matrixprofile.matrixprofile.analyze import analyze
+# from matrixprofile.matrixprofile import discover
+# from matrixprofile.matrixprofile import transform
+# from matrixprofile.matrixprofile import utils
+# from matrixprofile.matrixprofile import io
+# from matrixprofile.matrixprofile import algorithms
+# from matrixprofile.matrixprofile import datasets

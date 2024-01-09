@@ -17,13 +17,13 @@ logger = logging.getLogger(__name__)
 import numpy as np
 
 # Project imports
-from matrixprofile import core
-from matrixprofile.preprocess import preprocess
-from matrixprofile.preprocess import validate_preprocess_kwargs
-from matrixprofile.algorithms.mpx import mpx
-from matrixprofile.algorithms.scrimp import scrimp_plus_plus
-from matrixprofile.algorithms.skimp import skimp
-from matrixprofile.algorithms.skimp import maximum_subsequence
+from matrixprofile.matrixprofile import core
+from matrixprofile.matrixprofile.preprocess import preprocess
+from matrixprofile.matrixprofile.preprocess import validate_preprocess_kwargs
+from matrixprofile.matrixprofile.algorithms.mpx import mpx
+from matrixprofile.matrixprofile.algorithms.scrimp import scrimp_plus_plus
+from matrixprofile.matrixprofile.algorithms.skimp import skimp
+from matrixprofile.matrixprofile.algorithms.skimp import maximum_subsequence
 
 
 def compute(ts, windows=None, query=None, sample_pct=1, threshold=0.98,

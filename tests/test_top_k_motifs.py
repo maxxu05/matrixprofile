@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms.top_k_motifs import top_k_motifs
+from matrixprofile.matrixprofile.algorithms.top_k_motifs import top_k_motifs
 
 def test_all_inf():
 	obj = {

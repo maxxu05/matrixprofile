@@ -10,7 +10,7 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile import core
+from matrixprofile.matrixprofile import core
 
 
 def pmp_top_k_discords(profile, exclusion_zone=None, k=3):

@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms.statistics import statistics
+from matrixprofile.matrixprofile.algorithms.statistics import statistics
 
 
 def test_invalid_ts_not_1d():

@@ -21,9 +21,9 @@ import warnings
 from matplotlib import pyplot as plt
 import numpy as np
 
-from matrixprofile import core
-from matrixprofile.algorithms.mpx import mpx
-from matrixprofile.exceptions import NoSolutionPossible
+from matrixprofile.matrixprofile import core
+from matrixprofile.matrixprofile.algorithms.mpx import mpx
+from matrixprofile.matrixprofile.exceptions import NoSolutionPossible
 
 
 def split(lower_bound, upper_bound, middle):

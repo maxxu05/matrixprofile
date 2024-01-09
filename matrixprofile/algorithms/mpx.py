@@ -12,9 +12,9 @@ import math
 
 import numpy as np
 
-from matrixprofile import core
-from matrixprofile.algorithms.cympx import mpx_parallel as cympx_parallel
-from matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
+from matrixprofile.matrixprofile import core
+from matrixprofile.matrixprofile.algorithms.cympx import mpx_parallel as cympx_parallel
+from matrixprofile.matrixprofile.algorithms.cympx import mpx_ab_parallel as cympx_ab_parallel
 
 
 def mpx(ts, w, query=None, cross_correlation=False, n_jobs=1):

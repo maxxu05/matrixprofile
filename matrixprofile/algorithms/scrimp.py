@@ -29,7 +29,7 @@ import warnings
 
 import numpy as np
 
-from matrixprofile import core
+from matrixprofile.matrixprofile import core
 
 
 def calc_distance_profile(X, y, n, m, meanx, sigmax):

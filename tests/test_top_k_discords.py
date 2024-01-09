@@ -14,7 +14,7 @@ import pytest
 
 import numpy as np
 
-from matrixprofile.algorithms.top_k_discords import top_k_discords
+from matrixprofile.matrixprofile.algorithms.top_k_discords import top_k_discords
 
 
 def test_mp_all_same():

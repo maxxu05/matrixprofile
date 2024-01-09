@@ -9,17 +9,17 @@ range = getattr(__builtins__, 'xrange', range)
 
 import math
 
-from matrixprofile import core
+from matrixprofile.matrixprofile import core
 
-from matrixprofile.preprocess import preprocess
-from matrixprofile.preprocess import validate_preprocess_kwargs
-from matrixprofile.discover import discords
-from matrixprofile.discover import motifs
-from matrixprofile.algorithms import skimp
-from matrixprofile.algorithms import maximum_subsequence
-from matrixprofile.algorithms import mpx
-from matrixprofile.algorithms import scrimp_plus_plus
-from matrixprofile import visualize
+from matrixprofile.matrixprofile.preprocess import preprocess
+from matrixprofile.matrixprofile.preprocess import validate_preprocess_kwargs
+from matrixprofile.matrixprofile.discover import discords
+from matrixprofile.matrixprofile.discover import motifs
+from matrixprofile.matrixprofile.algorithms import skimp
+from matrixprofile.matrixprofile.algorithms import maximum_subsequence
+from matrixprofile.matrixprofile.algorithms import mpx
+from matrixprofile.matrixprofile.algorithms import scrimp_plus_plus
+from matrixprofile.matrixprofile import visualize
 
 
 def analyze_pmp(ts, query, sample_pct, threshold, windows=None, n_jobs=1):

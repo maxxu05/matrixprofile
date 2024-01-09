@@ -10,8 +10,8 @@ range = getattr(__builtins__, 'xrange', range)
 
 import numpy as np
 
-from matrixprofile import core
-from matrixprofile.algorithms.mpdist import mpdist
+from matrixprofile.matrixprofile import core
+from matrixprofile.matrixprofile.algorithms.mpdist import mpdist
 
 def compute_dist(args):
     """
